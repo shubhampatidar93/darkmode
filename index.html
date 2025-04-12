@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darkmode</title>
+    <style>
+       #button{
+        display: flex;
+        text-align: center;
+        margin-left: 450px;
+        margin-top: 200px;
+        padding: 20px ;
+        font-size:50px;
+        border: 5px solid black;
+        border-radius: 30px;
+        transition:transform 0.5s;
+       }
+       button:active{
+        transform: scale(0.9);
+       }
+       
+    </style>
+</head>
+<body>
+    <button id="button" onclick="dark()">DARKMODE</button>
+    <script>
+        function dark(){
+            let button = document.getElementById("button");
+           if (document.body.style.backgroundColor === "black") 
+           {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            } else {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            }
+        }
+    </script>
+</body>
+</html>
